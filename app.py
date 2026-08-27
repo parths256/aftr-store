@@ -7,7 +7,7 @@ from flask import Flask, jsonify, render_template, request
 load_dotenv()
 BASE=Path(__file__).resolve().parent; ORDERS=BASE/'orders.json'
 app=Flask(__name__,template_folder='templates',static_folder='static')
-PRODUCTS={1:('Basic Cotton Crew-Neck T-Shirt',550),2:('Printed Casual Shirt',899),3:('Slim-Fit Denim Jeans',1499),4:('Cotton Pyjama Set',799),5:('Formal Trousers',1799),6:('Wool-Blend Sweater',2499),7:('Zippered Hoodie',1999),8:('Ethnic Kurta with Embroidery',2999),9:('Leather Jacket',4499),10:('Blazer (Slim Fit)',4999)}
+PRODUCTS={1:('Classic Black Crew-Neck T-Shirt',550),2:('Embroidered Oversized Shirt',899),3:('Straight-Fit Dark Denim Jeans',1499),4:('Blue Gingham Co-ord Set',799),5:('Grey Tailored Formal Trousers',1799),6:('Brown Wool-Blend Sweater',2499),7:('Beige Oversized Zip Hoodie',1999),8:('Paisley Printed Ethnic Kurta',2999),9:('Brown Leather Jacket',4499),10:('Beige Slim-Fit Blazer',4999)}
 def client():
  k=os.getenv('RAZORPAY_KEY_ID'); s=os.getenv('RAZORPAY_KEY_SECRET')
  if not k or not s: raise RuntimeError('Add Razorpay keys to .env first.')
