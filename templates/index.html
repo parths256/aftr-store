@@ -443,12 +443,57 @@
 
   </div>
 
-
-  <script src="/static/script.js"></script>
-
-</body>
-</html>
 <script src="/static/script.js"></script>
+
+<script>
+const campaignImages = [
+  "/static/product 10.jpg",
+  "/static/product 9.jpg",
+  "/static/product 8.jpg",
+  "/static/product 7.jpg",
+  "/static/product 6.jpg",
+  "/static/product 5.jpg"
+];
+
+let campaignIndex = 0;
+
+const heroCampaign = document.getElementById("campaignImage");
+const heroCampaignNumber = document.getElementById("campaignNumber");
+
+campaignImages.forEach(function(src){
+  const preload = new Image();
+  preload.src = src;
+});
+
+if(heroCampaign){
+
+  setInterval(function(){
+
+    heroCampaign.style.opacity = "0";
+
+    setTimeout(function(){
+
+      campaignIndex++;
+
+      if(campaignIndex >= campaignImages.length){
+        campaignIndex = 0;
+      }
+
+      heroCampaign.src = campaignImages[campaignIndex];
+
+      if(heroCampaignNumber){
+        heroCampaignNumber.textContent =
+          "AFTR / " + String(campaignIndex + 1).padStart(2,"0");
+      }
+
+      heroCampaign.style.opacity = "1";
+
+    },400);
+
+  },3000);
+
+}
+</script>
 
 </body>
 </html>
