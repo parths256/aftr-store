@@ -1008,3 +1008,7 @@ footer{
 .hero-visual:hover .campaign-image{
   transform:scale(1.015);
 }
+#campaignImage{
+  opacity:1;
+  transition:opacity .4s ease, transform 1.2s ease;
+}
