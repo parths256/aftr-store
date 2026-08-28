@@ -24,3 +24,156 @@
     height:220px;
   }
 }
+/* PRODUCT POPUP */
+
+.product-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.product-modal.open{
+  display:flex;
+}
+
+.product-modal-box{
+  position:relative;
+  background:#fff;
+  width:min(900px,95vw);
+  max-height:90vh;
+  overflow:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.product-modal-image{
+  min-height:520px;
+}
+
+.product-modal-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.product-modal-info{
+  padding:55px 40px;
+  display:flex;
+  flex-direction:column;
+}
+
+.product-modal-close{
+  position:absolute;
+  right:18px;
+  top:12px;
+  border:0;
+  background:none;
+  font-size:34px;
+  cursor:pointer;
+  z-index:2;
+}
+
+.modal-category{
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:14px;
+}
+
+.product-modal-info h2{
+  font-size:32px;
+  margin:0 0 20px;
+}
+
+.modal-price{
+  font-size:22px;
+  margin-bottom:35px;
+}
+
+.size-section p{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+}
+
+.size-buttons{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+
+.size-btn{
+  width:52px;
+  height:52px;
+  border:1px solid #111;
+  background:#fff;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.size-btn:hover,
+.size-btn.selected{
+  background:#111;
+  color:#fff;
+}
+
+.size-error{
+  height:20px;
+  margin-top:12px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.modal-add{
+  margin-top:15px;
+  width:100%;
+  padding:17px;
+  border:1px solid #111;
+  background:#111;
+  color:#fff;
+  font-weight:700;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.modal-add:hover{
+  background:#fff;
+  color:#111;
+}
+
+.modal-open{
+  overflow:hidden;
+}
+
+.card{
+  cursor:pointer;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .product-modal-box{
+    grid-template-columns:1fr;
+  }
+
+  .product-modal-image{
+    min-height:360px;
+    height:360px;
+  }
+
+  .product-modal-info{
+    padding:30px 22px;
+  }
+
+  .product-modal-info h2{
+    font-size:25px;
+  }
+
+}
