@@ -992,3 +992,19 @@ footer{
   }
 
 }
+/* CAMPAIGN IMAGE TRANSITION */
+
+.campaign-image{
+  opacity:1;
+  transition:
+    opacity .55s ease,
+    transform 1.2s ease;
+}
+
+.campaign-image.changing{
+  opacity:0;
+}
+
+.hero-visual:hover .campaign-image{
+  transform:scale(1.015);
+}
