@@ -1489,3 +1489,207 @@ footer{
   }
 
 }
+/* =====================================
+   AFTR — STRONG PRODUCT POPUP REDESIGN
+===================================== */
+
+.product-modal-box{
+  width:min(1180px,94vw);
+  min-height:680px;
+  max-height:92vh;
+  grid-template-columns:58% 42%;
+  background:#f5f2ec;
+  border:0;
+}
+
+.product-modal-image{
+  min-height:680px;
+  height:100%;
+  background:#ddd8d0;
+}
+
+.product-modal-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.product-modal-info{
+  padding:72px 58px 42px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.modal-category{
+  margin:0 0 28px;
+  font-size:9px;
+  letter-spacing:2.6px;
+  color:#817a71;
+}
+
+.product-modal-info h2{
+  font-family:"DM Sans",sans-serif;
+  font-size:46px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin:0 0 22px;
+  max-width:390px;
+}
+
+.modal-price{
+  font-size:20px;
+  font-weight:500;
+  margin:0 0 48px;
+}
+
+.size-section{
+  border-top:1px solid #cfc8be;
+  padding-top:28px;
+}
+
+.size-section p{
+  margin:0 0 16px;
+  font-size:9px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.size-buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin:0;
+}
+
+.size-btn{
+  width:100%;
+  height:58px;
+  border:1px solid #aaa39a;
+  background:transparent;
+  font-family:"DM Sans",sans-serif;
+  font-size:11px;
+  font-weight:600;
+}
+
+.size-btn:hover,
+.size-btn.selected{
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}
+
+.size-error{
+  margin-top:10px;
+  height:18px;
+  font-size:9px;
+}
+
+.modal-add{
+  width:100%;
+  min-height:62px;
+  margin-top:24px;
+  background:#111;
+  color:#fff;
+  border:1px solid #111;
+  font-family:"DM Sans",sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.8px;
+}
+
+.modal-add:hover{
+  background:#f5f2ec;
+  color:#111;
+}
+
+.product-modal-info::after{
+  content:"COMPLIMENTARY SHIPPING OVER ₹1,499  •  EASY RETURNS";
+  margin-top:auto;
+  padding-top:24px;
+  border-top:1px solid #cfc8be;
+  color:#817a71;
+  font-size:8px;
+  letter-spacing:1.3px;
+  line-height:1.6;
+}
+
+.product-modal-close{
+  top:20px;
+  right:24px;
+  font-size:32px;
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  .product-modal-box{
+    grid-template-columns:1fr 1fr;
+    min-height:600px;
+  }
+
+  .product-modal-image{
+    min-height:600px;
+  }
+
+  .product-modal-info{
+    padding:58px 34px 34px;
+  }
+
+  .product-modal-info h2{
+    font-size:34px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .product-modal{
+    padding:0;
+  }
+
+  .product-modal-box{
+    width:100%;
+    max-width:none;
+    min-height:0;
+    max-height:100vh;
+    grid-template-columns:1fr;
+  }
+
+  .product-modal-image{
+    height:52vh;
+    min-height:360px;
+  }
+
+  .product-modal-info{
+    padding:30px 20px 26px;
+  }
+
+  .product-modal-info h2{
+    font-size:30px;
+    max-width:100%;
+  }
+
+  .modal-price{
+    margin-bottom:28px;
+  }
+
+  .size-buttons{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .size-btn{
+    height:52px;
+  }
+
+  .product-modal-info::after{
+    margin-top:24px;
+  }
+
+}
