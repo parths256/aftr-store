@@ -1003,3 +1003,53 @@ renderFilters();
 renderProducts();
 
 renderBag();
+/* =========================================
+   AFTR — HEADER + SCROLL EFFECTS
+========================================= */
+
+const siteHeader = document.querySelector("header");
+
+window.addEventListener("scroll", function(){
+
+  if(window.scrollY > 70){
+    siteHeader?.classList.add("header-scrolled");
+  } else {
+    siteHeader?.classList.remove("header-scrolled");
+  }
+
+});
+
+
+/* =========================================
+   AFTR — SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(
+  ".campaign-card, .section-head, .card, .about, .contact"
+);
+
+revealElements.forEach(function(el){
+  el.classList.add("reveal");
+});
+
+const revealObserver = new IntersectionObserver(
+  function(entries){
+
+    entries.forEach(function(entry){
+
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+
+    });
+
+  },
+  {
+    threshold:0.08
+  }
+);
+
+revealElements.forEach(function(el){
+  revealObserver.observe(el);
+});
