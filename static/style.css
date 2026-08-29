@@ -1330,3 +1330,162 @@ footer{
   }
 
 }
+/* =====================================
+   AFTR — REFINED PRODUCT POPUP
+===================================== */
+
+.product-modal-box{
+  width:min(1040px,92vw);
+  grid-template-columns:1.08fr .92fr;
+  background:#f3f0ea;
+  border:1px solid #c8c1b7;
+}
+
+.product-modal-image{
+  min-height:620px;
+  background:#d8d3cb;
+}
+
+.product-modal-info{
+  padding:70px 58px 45px;
+  justify-content:center;
+}
+
+.modal-category{
+  font-size:9px;
+  letter-spacing:2.3px;
+  color:#777169;
+  margin-bottom:20px;
+}
+
+.product-modal-info h2{
+  font-family:"DM Sans",sans-serif;
+  font-size:38px;
+  font-weight:700;
+  line-height:1.03;
+  letter-spacing:-1.8px;
+  max-width:390px;
+  margin:0 0 22px;
+}
+
+.modal-price{
+  font-size:18px;
+  font-weight:600;
+  margin:0 0 36px;
+}
+
+.size-section{
+  padding-top:27px;
+  border-top:1px solid #cec8bf;
+}
+
+.size-section p{
+  margin:0;
+  font-size:9px;
+  letter-spacing:1.8px;
+  font-weight:700;
+}
+
+.size-buttons{
+  gap:9px;
+  margin-top:16px;
+}
+
+.size-btn{
+  width:61px;
+  height:52px;
+  border:1px solid #aaa39a;
+  background:transparent;
+  font-family:"DM Sans",sans-serif;
+  font-size:12px;
+  font-weight:600;
+  transition:.2s ease;
+}
+
+.size-btn:hover,
+.size-btn.selected{
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}
+
+.size-error{
+  margin-top:10px;
+  height:18px;
+  font-size:9px;
+}
+
+.modal-add{
+  margin-top:18px;
+  min-height:58px;
+  background:#111;
+  color:#fff;
+  border:1px solid #111;
+  font-family:"DM Sans",sans-serif;
+  font-size:10px;
+  letter-spacing:1.5px;
+}
+
+.modal-add:hover{
+  background:#f3f0ea;
+  color:#111;
+}
+
+.product-modal-info::after{
+  content:"COMPLIMENTARY SHIPPING OVER ₹1,499  ·  EASY RETURNS";
+  display:block;
+  margin-top:20px;
+  padding-top:17px;
+  border-top:1px solid #cec8bf;
+  color:#777169;
+  font-size:8px;
+  letter-spacing:1.2px;
+  line-height:1.6;
+}
+
+.product-modal-close{
+  top:18px;
+  right:22px;
+  font-size:30px;
+  font-weight:300;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .product-modal{
+    padding:12px;
+  }
+
+  .product-modal-box{
+    width:100%;
+    grid-template-columns:1fr;
+    max-height:94vh;
+  }
+
+  .product-modal-image{
+    min-height:0;
+    height:410px;
+  }
+
+  .product-modal-info{
+    padding:32px 22px 28px;
+  }
+
+  .product-modal-info h2{
+    font-size:27px;
+    letter-spacing:-1px;
+  }
+
+  .modal-price{
+    margin-bottom:26px;
+  }
+
+  .size-btn{
+    flex:1;
+    width:auto;
+  }
+
+}
